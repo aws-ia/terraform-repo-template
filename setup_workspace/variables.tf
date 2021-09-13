@@ -23,7 +23,3 @@ variable "working_directory" {
   type    = string
   default = "/deploy"
 }
-variable "region" {
-  type    = string
-  default = "us-east-2"
-}
