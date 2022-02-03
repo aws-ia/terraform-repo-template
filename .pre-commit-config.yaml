@@ -1,0 +1,47 @@
+---
+
+fail_fast: true
+minimum_pre_commit_version: "2.6.0"
+
+repos:
+  -
+    repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-executables-have-shebangs
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-vcs-permalinks
+      - id: check-xml
+      - id: check-yaml
+
+  - # see https://github.com/antonbabenko/pre-commit-terraform
+    repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.62.0
+    hooks:
+      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_fmt
+      - id: terraform_fmt
+
+      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_validate
+      - id: terraform_validate
+
+      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_docs
+      - id: terraform_docs
+        args:
+          - "--args=--config=.terraform-docs.yaml"
+
+      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_providers_lock
+      - id: terraform_providers_lock
+
+      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_tflint
+      - id: terraform_tflint
+        args:
+          - "--args=--config=.tflint.hcl"
+
+      - id: terraform_tfsec
+        args:
+          - "--args=--custom-check-dir=.tfsec"

@@ -10,3 +10,11 @@ settings:
   required: true
   sensitive: true
   type: true
+
+sort:
+  enabled: true
+  by: required
+
+output:
+  file: README.md
+  mode: replace
