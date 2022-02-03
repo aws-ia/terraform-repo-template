@@ -6,12 +6,16 @@
 1. [install pre-commit](https://pre-commit.com/)
 2. configure pre-commit: `pre-commit install`
 3. install required tools
-- [tflint](https://github.com/terraform-linters/tflint)
-- [tfsec](https://aquasecurity.github.io/tfsec/v1.0.11/)
-- [terraform-docs](https://github.com/terraform-docs/terraform-docs)
-- [golang](https://go.dev/doc/install) (for macos you can use `brew`)
+    - [tflint](https://github.com/terraform-linters/tflint)
+    - [tfsec](https://aquasecurity.github.io/tfsec/v1.0.11/)
+    - [terraform-docs](https://github.com/terraform-docs/terraform-docs)
+    - [golang](https://go.dev/doc/install) (for macos you can use `brew`)
 
 Write code according to [I&A module standards](https://github.com/aws-ia/standards-terraform/content/standards/index.en.md) (need to update link once it goes live)
+
+## Module Documentation
+
+**Do not manually update README.md**. `terraform-docs` is used to generate README files. For any instructions an content, please update [.header.md](./.header.md) then simply run `terraform-docs ./` or allow the `pre-commit` to do so.
 
 ## Terratest
 
