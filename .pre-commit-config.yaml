@@ -40,8 +40,8 @@ repos:
       # see https://github.com/antonbabenko/pre-commit-terraform#terraform_tflint
       - id: terraform_tflint
         args:
-          - "--args=--config=.tflint.hcl"
+          - "--args=--config=__GIT_WORKING_DIR__/.tflint.hcl"
 
       - id: terraform_tfsec
         args:
-          - "--args=--custom-check-dir=.tfsec"
+          - "--args=--custom-check-dir=__GIT_WORKING_DIR__/.tfsec"
