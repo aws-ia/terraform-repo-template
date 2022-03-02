@@ -1,14 +1,12 @@
 ---
-
 fail_fast: true
 minimum_pre_commit_version: "2.6.0"
 
 repos:
-  -
-    repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     # To update the frozen revs, run:  pre-commit autoupdate --freeze
     # see: https://pre-commit.com/#pre-commit-autoupdate for more details.
-    rev: 8fe62d14e0b4d7d845a7022c5c2c3ae41bdd3f26  # frozen: v4.1.0
+    rev: 8fe62d14e0b4d7d845a7022c5c2c3ae41bdd3f26 # frozen: v4.1.0
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
@@ -23,7 +21,7 @@ repos:
 
   - # see https://github.com/antonbabenko/pre-commit-terraform
     repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: c2d1a58a5e7e448a66f3f8bb561f58ee3c95a461  # frozen: v1.64.0
+    rev: c2d1a58a5e7e448a66f3f8bb561f58ee3c95a461 # frozen: v1.64.0
     hooks:
       # see https://github.com/antonbabenko/pre-commit-terraform#terraform_fmt
       - id: terraform_fmt
