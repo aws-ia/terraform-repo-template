@@ -1,48 +1,11 @@
 ---
-fail_fast: true
+fail_fast: false
 minimum_pre_commit_version: "2.6.0"
-
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    # To update the frozen revs, run:  pre-commit autoupdate --freeze
-    # see: https://pre-commit.com/#pre-commit-autoupdate for more details.
-    rev: 8fe62d14e0b4d7d845a7022c5c2c3ae41bdd3f26 # frozen: v4.1.0
+  -
+    repo: https://github.com/aws-ia/pre-commit-hooks
+    # To update run:
+    # pre-commit autoupdate --freeze
+    rev: f589397d337ddfceb8fd8a7a0c70d747e96e0e5f  # frozen: v1.1
     hooks:
-      - id: check-added-large-files
-      - id: check-case-conflict
-      - id: check-merge-conflict
-      - id: check-executables-have-shebangs
-      - id: check-json
-      - id: check-merge-conflict
-      - id: check-symlinks
-      - id: check-vcs-permalinks
-      - id: check-xml
-      - id: check-yaml
-
-  - # see https://github.com/antonbabenko/pre-commit-terraform
-    repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: c2d1a58a5e7e448a66f3f8bb561f58ee3c95a461 # frozen: v1.64.0
-    hooks:
-      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_fmt
-      - id: terraform_fmt
-
-      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_validate
-      - id: terraform_validate
-
-      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_docs
-      - id: terraform_docs
-        args:
-          - "--args=--config=.terraform-docs.yaml"
-
-      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_providers_lock
-      - id: terraform_providers_lock
-
-      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_tflint
-      - id: terraform_tflint
-        args:
-          - "--args=--config=__GIT_WORKING_DIR__/.tflint.hcl"
-
-      # see https://github.com/antonbabenko/pre-commit-terraform#terraform_tfsec
-      - id: terraform_tfsec
-        args:
-          - "--args=--custom-check-dir=__GIT_WORKING_DIR__/.tfsec"
+      - id: aws-ia-meta-hook
