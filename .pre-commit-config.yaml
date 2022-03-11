@@ -3,9 +3,9 @@ fail_fast: false
 minimum_pre_commit_version: "2.6.0"
 repos:
   -
-    repo: https://github.com/aws-ia/pre-commit-hooks
+    repo: https://github.com/aws-ia/pre-commit-configs
     # To update run:
     # pre-commit autoupdate --freeze
-    rev: f589397d337ddfceb8fd8a7a0c70d747e96e0e5f  # frozen: v1.1
+    rev: e2be6eb118666030010fdeb0edaba9db669619d1  # frozen: v1.3.2
     hooks:
       - id: aws-ia-meta-hook
