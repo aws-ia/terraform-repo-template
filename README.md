@@ -2,6 +2,7 @@
 # Creating modules for AWS I&A Organization
 
 This repo template is used to seed Terraform Module templates for the [AWS I&A GitHub organization](https://github.com/aws-ia). Usage of this template is allowed per included license. PRs to this template will be considered but are not guaranteed to be included. Consider creating an issue to discuss a feature you want to include before taking the time to create a PR.
+
 ### TL;DR
 
 1. [install pre-commit](https://pre-commit.com/)
@@ -49,6 +50,7 @@ Please include tests to validate your examples/<> root modules, at a minimum. Th
     - Run a specific test with a timeout
 
         `go test -run examples_basic_test.go -timeout 45m`
+
 ## Module Standards
 
 For best practices and information on developing with Terraform, see the [I&A Module Standards](https://aws-ia.github.io/standards-terraform/)
