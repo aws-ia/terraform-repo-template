@@ -2,7 +2,6 @@
 # Creating modules for AWS I&A Organization
 
 This repo template is used to seed Terraform Module templates for the [AWS I&A GitHub organization](https://github.com/aws-ia). Usage of this template is allowed per included license. PRs to this template will be considered but are not guaranteed to be included. Consider creating an issue to discuss a feature you want to include before taking the time to create a PR.
-
 ### TL;DR
 
 1. [install pre-commit](https://pre-commit.com/)
@@ -12,8 +11,9 @@ This repo template is used to seed Terraform Module templates for the [AWS I&A G
     - [tfsec](https://aquasecurity.github.io/tfsec/v1.0.11/)
     - [terraform-docs](https://github.com/terraform-docs/terraform-docs)
     - [golang](https://go.dev/doc/install) (for macos you can use `brew`)
+    - [coreutils](https://www.gnu.org/software/coreutils/)
 
-Write code according to [I&A module standards](https://github.com/aws-ia/standards-terraform/content/standards/index.en.md) (need to update link once it goes live)
+Write code according to [I&A module standards](https://aws-ia.github.io/standards-terraform/)
 
 ## Module Documentation
 
@@ -23,13 +23,39 @@ Write code according to [I&A module standards](https://github.com/aws-ia/standar
 
 Please include tests to validate your examples/<> root modules, at a minimum. This can be accomplished with usually only slight modifications to the [boilerplate test provided in this template](./test/examples\_basic\_test.go)
 
+### Configure and run Terratest
+
+1. Install
+
+    [golang](https://go.dev/doc/install) (for macos you can use `brew`)
+2. Change directory into the test folder.
+    
+    `cd test`
+3. Initialize your test
+    
+    go mod init github.com/[github org]/[repository]
+
+    `go mod init github.com/aws-ia/terraform-aws-vpc`
+4. Run tidy
+
+    `git mod tidy`
+5. Install Terratest
+
+    `go get github.com/gruntwork-io/terratest/modules/terraform`
+6. Run test (You can have multiple test files).
+    - Run all tests
+
+        `go test`
+    - Run a specific test with a timeout
+
+        `go test -run examples_basic_test.go -timeout 45m`
 ## Module Standards
 
 For best practices and information on developing with Terraform, see the [I&A Module Standards](https://aws-ia.github.io/standards-terraform/)
 
 ## Continuous Integration
 
-The I&A team uses AWS Code Build to preform Continuous Integration (CI) within the organization. Our CI uses the a repo's `.pre-commit-config.yaml` file as well as some other checks. All PRs with other CI will be rejected. See our [FAQ](https://aws-ia.github.io/standards-terraform/faq/#are-modules-protected-by-ci-automation) for more details.
+The I&A team uses AWS CodeBuild to perform continuous integration (CI) within the organization. Our CI uses the a repo's `.pre-commit-config.yaml` file as well as some other checks. All PRs with other CI will be rejected. See our [FAQ](https://aws-ia.github.io/standards-terraform/faq/#are-modules-protected-by-ci-automation) for more details.
 
 ## Requirements
 
@@ -37,7 +63,7 @@ The I&A team uses AWS Code Build to preform Continuous Integration (CI) within t
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.72.0 |
-| <a name="requirement_awscc"></a> [awscc](#requirement\_awscc) | >= 0.11.0 |
+| <a name="requirement_awscc"></a> [awscc](#requirement\_awscc) | >= 0.21.0 |
 
 ## Providers
 

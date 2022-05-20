@@ -7,15 +7,7 @@ terraform {
     }
     awscc = {
       source  = "hashicorp/awscc"
-      version = ">= 0.11.0"
+      version = ">= 0.21.0"
     }
   }
-}
-
-provider "awscc" {
-  user_agent = [{
-    product_name    = "terraform-awscc-"
-    product_version = "0.0.1"
-    comment         = "V1/AWS-D69B4015/<github repo id>"
-  }]
 }
