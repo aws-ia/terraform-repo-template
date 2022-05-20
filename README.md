@@ -49,6 +49,7 @@ Please include tests to validate your examples/<> root modules, at a minimum. Th
     - Run a specific test with a timeout
 
         `go test -run examples_basic_test.go -timeout 45m`
+
 ## Module Standards
 
 For best practices and information on developing with Terraform, see the [I&A Module Standards](https://aws-ia.github.io/standards-terraform/)
@@ -63,7 +64,7 @@ The I&A team uses AWS CodeBuild to perform continuous integration (CI) within th
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.72.0 |
-| <a name="requirement_awscc"></a> [awscc](#requirement\_awscc) | >= 0.11.0 |
+| <a name="requirement_awscc"></a> [awscc](#requirement\_awscc) | >= 0.21.0 |
 
 ## Providers
 
