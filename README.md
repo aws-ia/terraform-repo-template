@@ -49,6 +49,7 @@ Please include tests to validate your examples/<> root modules, at a minimum. Th
     - Run a specific test with a timeout
 
         `go test -run examples_basic_test.go -timeout 45m`
+
 ## Module Standards
 
 For best practices and information on developing with Terraform, see the [I&A Module Standards](https://aws-ia.github.io/standards-terraform/)
