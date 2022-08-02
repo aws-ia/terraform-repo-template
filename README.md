@@ -29,10 +29,10 @@ Please include tests to validate your examples/<> root modules, at a minimum. Th
 
     [golang](https://go.dev/doc/install) (for macos you can use `brew`)
 2. Change directory into the test folder.
-    
+
     `cd test`
 3. Initialize your test
-    
+
     go mod init github.com/[github org]/[repository]
 
     `go mod init github.com/aws-ia/terraform-aws-vpc`
@@ -48,8 +48,7 @@ Please include tests to validate your examples/<> root modules, at a minimum. Th
         `go test`
     - Run a specific test with a timeout
 
-        `go test -run examples_basic_test.go -timeout 45m`
-
+        `go test -run TestExamplesBasic -timeout 45m`
 ## Module Standards
 
 For best practices and information on developing with Terraform, see the [I&A Module Standards](https://aws-ia.github.io/standards-terraform/)
@@ -62,7 +61,7 @@ The I&A team uses AWS CodeBuild to perform continuous integration (CI) within th
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.7 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.0.0, < 5.0.0 |
 | <a name="requirement_awscc"></a> [awscc](#requirement\_awscc) | >= 0.24.0 |
 
